@@ -1,4 +1,4 @@
-CFLAGS	= -o out -Wall -Wextra -Werror -lpng -lraylib
+CFLAGS	= -o out -Wall -Wextra -Werror -lpng -lraylib -I../include
 MAIN	= a.c
 CC	= gcc
 
@@ -22,14 +22,3 @@ sca:
 
 r:
 	./out
-
-gin:
-	rm -rf .git
-	git init
-	git add .
-	git commit -m ':)'
-	git branch -M master
-	git remote add origin git@github.com:daex3/$(name).git
-
-git:
-	git push -u origin master
