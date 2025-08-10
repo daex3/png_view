@@ -17,8 +17,8 @@ d:
 mac:
 	$(CC) -dM -E $(MAIN)
 sca:
-	scan-build -v -V make rel
-	clang-tidy $(MAIN) -- -I.
+	scan-build -v make rel
+	clang-tidy $(MAIN) -- -I. -I../include
 
 r:
 	./out

@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
 
 	for(size_t i = 0; i < e.len; ++i) {
 		Px	*p	= &e.x[i];
-		Color	 o	= { p->color.r, p->color.g, p->color.b, 255 };
+		Color	 o	= { p->color.r, p->color.g, p->color.b, p->color.a };
 
 		ImageDrawPixel(&raylib_image, p->pos.x, p->pos.y, o);
 	}
@@ -43,5 +43,6 @@ int main(int argc, char **argv) {
 
 	UnloadTexture(texture),
 	CloseWindow();
-	free(e.x);
+	free(e.x),
+	free(e.orig_x);
 }
