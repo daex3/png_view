@@ -1,4 +1,0 @@
-			p->color.r = *c,
-			p->color.g = c[1],
-			p->color.b = c[2],
-			p->color.a = c[3],
