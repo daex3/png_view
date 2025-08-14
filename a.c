@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
 
 	Image raylib_image = GenImageColor(e.size.x, e.size.y, BLUE);
 
-	for(size_t i = 0; i < e.len; ++i) {
+	for(int i = 0; i < e.len; ++i) {
 		Px	*p	= &e.x[i];
 		Color	 o	= { p->color.r, p->color.g, p->color.b, p->color.a };
 
